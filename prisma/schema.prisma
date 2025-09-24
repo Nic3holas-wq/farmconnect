@@ -1,0 +1,41 @@
+// // prisma/schema.prisma
+// generator client {
+//   provider = "prisma-client-js"
+// }
+
+// datasource db {
+//   provider = "postgresql"
+//   url      = env("DATABASE_URL")
+// }
+
+// model User {
+//   id          String   @id @default(cuid())
+//   email       String   @unique
+//   phone       String   @unique
+//   name        String
+//   role        UserRole @default(BUYER)
+//   avatar      String?
+//   isVerified  Boolean  @default(false)
+  
+//   // Farmer-specific
+//   farmName    String?
+//   location    String?
+//   county      String?
+//   idPhoto     String?
+//   farmPhotos  String[]
+  
+//   // Buyer-specific
+//   businessName String?
+//   businessType BusinessType?
+  
+//   products    Product[]
+//   orders      Order[]
+//   reviews     Review[]
+  
+//   createdAt   DateTime @default(now())
+//   updatedAt   DateTime @updatedAt
+
+//   @@map("users")
+// }
+
+// // Add the rest of your models from the previous schema here...
